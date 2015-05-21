@@ -1,0 +1,21 @@
+{
+  "name": "fib",
+  "version": "0.0.1",
+  "description": "Demonstration of JavaScript's 32-bit Integer behavior (PLUS example of 64-bit Integer JS). Example uses various fibonacci code patterns + benchmarks #benchmarkjs ftw",
+  "scripts": {
+    "start": "./node_modules/.bin/tap-prettify test/*.js",
+    "test": "./node_modules/.bin/faucet"
+  },
+  "author": "Dan Levy <dan@danlevy.net>",
+  "license": "MIT",
+  "dependencies": {
+    "benchmark": "^1.0.0",
+    "big-decimal": "^1.0.2",
+    "big.js": "^3.0.2",
+    "decimal.js": "^4.0.2",
+    "faucet": "0.0.1",
+    "microtime": "^1.4.1",
+    "tap-prettify": "0.0.2",
+    "tape": "^4.0.0"
+  }
+}
