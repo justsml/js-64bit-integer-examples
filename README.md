@@ -17,6 +17,52 @@ npm install
 
 ```sh
 npm test
+
+# Current results:
+> faucet
+
+✓ x86_ArrayPush: fib(50, & 73, & 74)
+✓ x86_Math: fib(50, & 73, & 74)
+✓ x86_Dan: fib(50, & 73, & 74)
+✓ x86_InnerLoop: fib(50, & 73, & 74)
+✓ x86_RecursionInner: fib(50, & 73, & 74)
+✓ x86_RecursionLinear: fib(50, & 73, & 74)
+✓ x64_BigJsSimple: fib(74, & 103, & 154)
+⨯ x64_BigJsMath: fib(74, & 103, & 154)
+  not ok 22 fib(74): 9.444732965739290427392e+21 === 1304969544928657
+    ---
+      operator: ok
+      expected: true
+      actual:   false
+      at: Test.<anonymous> (./fibonacci/test/tests.js:16:12)
+    ...
+  not ok 23 fib(103): 5.070602400912917605986812821504e+30 === 1500520536206896083277
+    ---
+      operator: ok
+      expected: true
+      actual:   false
+      at: Test.<anonymous> (./fibonacci/test/tests.js:16:12)
+    ...
+  not ok 24 fib(154): 1.1417981541647679048466287755595961091061972992e+46 === 68330027629092351019822533679447
+    ---
+      operator: ok
+      expected: true
+      actual:   false
+      at: Test.<anonymous> (./fibonacci/test/tests.js:16:12)
+    ...
+✓ x64_DecimalJsSimple: fib(74, & 103, & 154)
+⨯ x64_DecimalJSMath: fib(74, & 103, & 154)
+  not ok 29 fib(103): 1.500520536206896083276e+21 === 1500520536206896083277
+    ---
+      operator: ok
+      expected: true
+      actual:   false
+      at: Test.<anonymous> (./fibonacci/test/tests.js:16:12)
+    ...
+# tests 30
+# pass  26
+⨯ fail  4
+npm ERR! Test failed.  See above for more details.
 ```
 
 ## Benchmark:
