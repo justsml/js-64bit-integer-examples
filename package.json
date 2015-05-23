@@ -4,7 +4,8 @@
   "description": "Demonstration of JavaScript's 32-bit Integer behavior (PLUS example of 64-bit Integer JS). Example uses various fibonacci code patterns + benchmarks #benchmarkjs ftw",
   "scripts": {
     "start": "./node_modules/.bin/tap-prettify test/*.js",
-    "test": "./node_modules/.bin/faucet"
+    "test": "./node_modules/.bin/faucet",
+    "bench": "node ./bench/bench.js"
   },
   "author": "Dan Levy <dan@danlevy.net>",
   "license": "MIT",

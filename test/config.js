@@ -18,10 +18,13 @@ var answers = exports.answers = {
 
 // Exported for benchmarks
 var testsX86 = exports.testsX86 = {// here are the functions to test
-  x86_ArrayPush:       require('../fib-array-push.js'),
-  x86_Math:            require('../fib-math.js'),
-  x86_Dave:            require('../fib-dave.js'),
-  x86_Dan:             require('../fib-dan.js'),
+  x86_ArrayPush:        require('../fib-array-push.js'),
+  x86_Math:             require('../fib-math.js'),
+  // x86_Dave:             require('../fib-dave.js'),
+  x86_Dan:              require('../fib-dan.js'),
+  x86_InnerLoop:        require('../fib-inner-loop.js'),
+  x86_RecursionInner:   require('../fib-recursion-inner.js'),
+  x86_RecursionLinear:  require('../fib-recursion-linear.js')
   // ^^ 32 bit functions above ^^^
 };
 // Exported for benchmarks

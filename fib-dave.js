@@ -3,5 +3,5 @@ var fib = exports.fibonacci = function fib(n,arr,limit) {
   if (n==-1) return [arr[0]];
   if (n==0 || n >= limit) return arr[arr.length-1];
   arr.push(arr[arr.length-1] + arr[arr.length-2]);
-  return fib(n-1, arr);
+  return fib(n-1, arr, limit);
 };
