@@ -7,6 +7,12 @@
 - Tests
 - Benchmarks
 
+## Tests:
+
+```sh
+npm test
+```
+
 ## Benchmark:
 
 ```sh
