@@ -1,21 +1,12 @@
 'use strict';
+var _ = require('lodash');
 var Benchmark = require('benchmark');
 var suite = new Benchmark.Suite();
-
 var limit = 800;
-
+var Tests = require('../test/config.js');
+var answers = Tests.answers;
 // add tests
 suite
-// .add('fibonacci #1', function() { require('').fibonacci(limit); })
-// .add('fibonacci #2', function() { require('').fibonacci(limit); })
-// .add('fibonacci #3', function() { require('').fibonacci(limit); })
-// .add('fibonacci #4', function() { require('').fibonacci(limit); })
-.add('fibonacci #5', function() { require('').fibonacci(limit); })
-// .add('fibonacci #6', function() { require('').fibonacci(limit); })
-// .add('fibonacci #7', function() { require('').fibonacci(limit); })
-.add('fibonacci #8', function() { require('').fibonacci(limit); })
-.add('fib-dan-bigint.js', function() { require('../fib-dan-bigint.js').fibonacci(limit); })
-.add('fib-array-push.js', function() { require('../fib-array-push.js').fibonacci(limit); })
 .on('cycle', function(event) {
 	console.log(String(event.target));
 })
@@ -24,14 +15,23 @@ suite
 	this.forEach(function(stats) {
 		console.log('Name: ', stats.name);
 		console.log('	HZ: ', stats.hz);
-		// console.log('	Stats: ', stats.stats);
 	})
-	// console.log(this);
-})
+});
+
+function addTestsToBench(lbl, tests, verify) {
+  Object.keys(tests).forEach(function(testName) {
+  	suite.add(lbl.concat(testName), function testVals() {
+  		var fib = tests[testName] && tests[testName].fibonacci;
+  		var ans = verify.map(fib);
+  		// MUST: ans === [ 12586269025, 806515533049393, 1304969544928657 ]
+  	});
+  });
+}
+addTestsToBench('32bit: ', Tests.testsX86, [50, 73, 74]);
+addTestsToBench('64bit: ', Tests.testsX64, [74, 103, 154]);
+
+suite
 .run({ 'async': true });
-
-
-
 
 // like #1 but + caching and exp instead of pow
 function fibonacci3(n) {

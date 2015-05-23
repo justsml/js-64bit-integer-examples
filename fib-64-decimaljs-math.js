@@ -2,7 +2,7 @@ var Decimal, SQ5;
 Decimal = require('decimal.js');
 Decimal.config({
   precision: 200,
-  rounding: 4,
+  rounding: 3,
   errors: true
 });
 SQ5 = new Decimal(5).sqrt(); // useful ass constant, I <3 math
