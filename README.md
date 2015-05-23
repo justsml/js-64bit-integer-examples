@@ -7,6 +7,12 @@
 - Tests
 - Benchmarks
 
+## Install:
+
+```sh
+npm install
+```
+
 ## Tests:
 
 ```sh
@@ -19,7 +25,7 @@ npm test
 npm run bench
 ```
 
-```sh
+```
 Beginning 32bit Benchmarks ( test values  50, 73, 74 ) ...
 32bit: x86_ArrayPush x 612,639 ops/sec ±0.61% (97 runs sampled)
 32bit: x86_Math x 1,471,014 ops/sec ±0.27% (100 runs sampled)
