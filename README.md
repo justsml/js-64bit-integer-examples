@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/justsml/js-64bit-integer-examples.svg?branch=master)](https://travis-ci.org/justsml/js-64bit-integer-examples)
+
 # Example of BigNumber in JavaScript
 
 
