@@ -1,7 +1,7 @@
 'use strict';
 var Big = require('big.js');
 Big.DP = 0; // No decimals if == 0 -- otherwise, whole real # of places precision
-Big.RM = 1; // 0, 1, 2 or 3 ( ROUND_DOWN, ROUND_HALF_UP, ROUND_HALF_EVEN, ROUND_UP
+Big.RM = 0; // 0, 1, 2 or 3 ( ROUND_DOWN, ROUND_HALF_UP, ROUND_HALF_EVEN, ROUND_UP
 var test = require('tape').test;
 // SEE BOTTOM OF FILE: var verify = [50, 73, 74]; // Set the fib(MAX) to check, see answers below
 var conf = require('./config.js');
