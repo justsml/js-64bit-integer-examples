@@ -13,7 +13,7 @@
 
 In the 64-bit part of the tests we'll calculate a Fibonacci sequence up to 'step' #154, which should return ```68330027629092351019822533679447``` - about twice as many numbers as JS can reliably handle.
 
-Let's see is decimal.js or big.js can handle this...
+> Let's see if decimal.js or big.js can handle this...
 
 ## Install:
 
@@ -50,7 +50,7 @@ npm test
 npm run bench
 ```
 
-```
+```sh
 Beginning 32bit Benchmarks ( test values  50, 73, 74 ) ...
 32bit: x86_ArrayPush x 613,676 ops/sec ±0.46% (100 runs sampled)
 32bit: x86_Math x 1,400,608 ops/sec ±0.21% (100 runs sampled)
