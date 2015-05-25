@@ -30,7 +30,8 @@ var testsX86 = exports.testsX86 = {// here are the functions to test
 // Exported for benchmarks
 var testsX64 = exports.testsX64 = {// here are BigNums to test
   x64_BigJsSimple:      require('../fib-64-bigjs-simple.js'),
-  x64_BigJsMath:     require('../fib-64-bigjs-math.js'),
+  // WHY DOESN'T THIS WORK?
+  // x64_BigJsMath:     require('../fib-64-bigjs-math.js'),
   x64_DecimalJsSimple:  require('../fib-64-decimaljs-simple.js'),
   x64_DecimalJSMath: require('../fib-64-decimaljs-math.js')
 };

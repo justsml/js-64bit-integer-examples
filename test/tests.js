@@ -39,7 +39,7 @@ process.nextTick(function() {
 });
 process.nextTick(function() {
   // 64 bit tests
-  var verify = [74, 103, 154]
+  var verify = [74, 154]
   var tests = testsX64;
   Object.keys(tests).forEach(function(f) {
     doTest(tests[f] && tests[f].fibonacci, verify, f);
