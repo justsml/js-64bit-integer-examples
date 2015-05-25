@@ -7,8 +7,8 @@
 - Greater than 64-bit, 8-byte integer demonstration
 - Variety of fibonacci examples
 - 32 bit examples are included as a baseline for benchmarks (adjust tests to make the benchmarks run against the same answers to compare 'apples to apples')
-- Tests! ```npm test```
-- Benchmarks ```npm run bench```
+- Tests! ```npm install && npm test```
+- Benchmarks ```npm install && npm run bench```
 	- (64 bit in JS is possible, but mostly just hilariously slow)
 
 In the 64-bit part of the tests we'll calculate a Fibonacci sequence up to 'step' #154, which should return ```68330027629092351019822533679447``` - about twice as many numbers as JS can reliably handle.
